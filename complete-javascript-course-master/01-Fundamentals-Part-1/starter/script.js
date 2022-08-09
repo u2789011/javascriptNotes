@@ -9,25 +9,30 @@ console.log(23)
 let firstName = "Bob";
 console.log(firstName);
 
-
+//資料型別
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 
 // console.log(typeof true);
+//boolean
 console.log(typeof javascriptIsFun);
+//boolean
 // console.log(typeof 23);
+//number
 // console.log(typeof "javaScript");
+//string
 
-//dynamic type
+//dynamic type 型別不是固定的，會隨資料類型變化
 javascriptIsFun = 'YES!';
 console.log(typeof javascriptIsFun);
+//原本是boolean變成string
 
-//undefined
+//undefined 空值、尚未定義
 let year;
 console.log(year);
 console.log(typeof year);
 
-//null的bug
+//null的型別是物件，一個年久失修的bug
 console.log(typeof null);
 //object
 
@@ -44,12 +49,9 @@ age = 31;
 var job = "programmer";
 job = "teacher";
 
-//不會報錯但是不好的用法
-lastName = "zeng";
+//不會報錯但是不建議的用法，最好是每個variable都定義好let const 或 var
+lastName = "Wayne";
 console.log(lastName);
-
-
-
 
 //operator
 const now = 2037;
@@ -73,7 +75,7 @@ x --;// x = x - 1
 x --;
 console.log(x);
 
-//可以判斷條件
+//可以判斷大小
 console.log(ageJonas > ageSarah);
 console.log(ageSarah >= 18);
 
