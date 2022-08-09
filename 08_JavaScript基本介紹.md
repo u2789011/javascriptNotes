@@ -54,3 +54,12 @@ ES2015 之前是舊版的，2015 之後才是 modern javascript
 - 物件（object）
 
 - 原始型別（Primitive）
+  - Number
+  - String
+  - Boolean
+  - Undefined
+  - Null
+  - symbol(ES2015)
+  - BigInt(ES2020)
+
+動態型別：值有型別，變數沒有
