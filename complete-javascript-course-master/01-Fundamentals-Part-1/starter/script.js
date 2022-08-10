@@ -124,7 +124,7 @@ with
 multiple
 lines`);
 
-*/
+
 //用if else判斷回應的不同句子
 const age = 15;
 const isOldEnough = age >= 18;
@@ -146,3 +146,144 @@ if (birthyear <= 2000) {
 };
 
 console.log(century);
+
+//2022/08/10
+
+
+//type conversion 手動轉換型別從字串到數字
+const inputyear = '1991';
+console.log(Number(inputyear));
+console.log(Number(inputyear)+18);
+//如果轉換失敗會顯示NaN(not a number)NaN的type也是number
+//也可以從數字轉換成字串
+console.log(String(30),30)
+
+//type coercion JavaScript會自動轉換型別
+console.log("I'm " + 23 + " years old.");
+console.log('23' - '10' - 3);
+console.log('23' * '2');
+//Javascript會自動會把字串轉成數字
+let n = '1' + 1;//'11'
+n = n - 1;//10
+console.log(n);
+
+// 5 falsy values: 0, "", undefined, null, NaN
+console.log(Boolean(0)); 
+console.log(Boolean(undefined)); 
+console.log(Boolean('')); 
+console.log(Boolean({})); //true
+
+const money = 0;
+if (money) {
+  console.log("Don't spend it all ;)");
+}else{
+  console.log("You should get a job!");
+}
+
+//注意：如果height = 0 一樣會是false
+let height
+if (height){
+  console.log('YAY! Height is defined!');
+}else{
+  console.log('Height is not defined.')
+}
+
+
+const age = '18';
+//strict eqal 不做type cuercion
+if (age === 18) console.log('You just became an adult :D (strict)');
+//loose eqal 會自動轉換型別，會有bug不要用，最好用===然後在比較前手動轉換型別
+if (age == 18) console.log('You just became an adult :D (loose)');
+
+const favorite = Number(prompt("What's your favourite number?"));
+console.log(favorite);
+console.log(typeof favorite);
+
+if (favorite === 822) { //'23' = 23
+  console.log('Cool! 822 is an amazing number!')
+}else if (favorite == 822) { 
+  console.log('Cool! 822 is an amazing number! (sort of)')
+}else{
+  console.log(`${favorite} not a cool number`)
+}
+//不等於加個驚嘆號
+if (favorite !== 822) console.log('Why not 822?');
+
+//Basin boolean logic: And Or & Not
+
+//And 要全部都true
+//Or 只要有一個true就是true
+//Not 變成相反的結果（！）會第一個執行
+
+const hasDriverLicense = true;
+const hasGoodVision = true;
+
+//And
+console.log(hasDriverLicense && hasGoodVision);
+
+//Or
+console.log(hasDriverLicense || hasGoodVision);
+
+//Not
+console.log(!hasDriverLicense);
+
+const shouldDrive = hasDriverLicense && hasGoodVision;
+
+// if (shouldDrive){
+//   console.log('Sarah is able to drive!')
+// } else {
+//   console.log('someone else should drive.')
+// }
+
+const isTired = false;
+console.log(hasDriverLicense && hasGoodVision && isTired);
+
+if (hasDriverLicense && hasGoodVision && !isTired){
+  console.log('Sarah is able to drive!')
+} else {
+  console.log('someone else should drive.')
+}
+
+
+const day = 'friday';
+
+switch(day){
+  case 'monday':
+    console.log('Go to coding meetup!');
+    break;
+  case 'tuesday':
+    console.log('Prepare theory vidoes.');
+    break;
+  case 'wednesday':
+  case 'thursday':
+    console.log('Write code example');
+  break;
+  case 'friday':
+    console.log('Record videos');
+  break;
+  case 'saturday':
+  case 'sunday':
+    console.log('enjoy weekend! :D');
+  break;
+  default:
+    console.log('Not a valid day :(')
+}
+
+if (day === 'wednesday'){
+  console.log('星期三猴子去爬山');
+}else if (day === 'thursday'){
+  console.log('星期四猴子逛夜市');
+}else if(day === 'monday' || day === 'tuesday' || day === 'friday'){
+  console.log('猴子要上班');
+}else{
+  console.log('猴子放假');
+}
+
+//ternary operator (condition operator)
+const age = 19;
+age >= 18 ? console.log("I like to drink wine 🍷") : console.log("I like to drink water 🥛");
+
+const drink = age >= 18 ? 'wine🍷' : 'water🥛';
+console.log(drink);
+console.log(`I like to drink ${age >= 18 ? "wine 🍷" : "water 🥛"}`);
+*/

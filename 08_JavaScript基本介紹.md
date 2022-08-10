@@ -62,4 +62,15 @@ ES2015 之前是舊版的，2015 之後才是 modern javascript
   - symbol(ES2015)
   - BigInt(ES2020)
 
-動態型別：值有型別，變數沒有
+### 動態型別
+
+值有型別，變數沒有
+
+### expression 跟 statement
+
+expression 會創造一個值（詞）
+statement 比較大的區塊，本身不會創造任何東西（句子）
+
+### JavaScript 版本
+
+Netscape 跟微軟競爭之下產生 javascript(mocha)跟 jscript，由 E C Ｍ A 統一了標準，在 2015 年發布重大更新，之後每年都會有新的 release，只擴充功能而不會去改動舊的，所以之前的程式碼現在的瀏覽器也都可以跑得動，只是也因為這樣留下很多沒辦法改掉的古老 bug，現在我們可以用最新版在開發，但是用在產品的話就有可能有使用者舊的瀏覽器跑不動，會需要經過編譯（ES5 是最安全的）
