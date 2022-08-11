@@ -82,7 +82,7 @@ function fruitProcessor(apples, oranges){
 console.log(fruitProcessor(2,3));
 //括號裡面是argument，把資料放進function裡
 //console.log不算是有return，要存到variable裡面才算執行function
-*/
+
 
 const calcAge = function(birthyear) {
   return 2037 - birthyear;
@@ -104,3 +104,4 @@ const yearsUntilRetirement = function(birthYear, firstname) {
 }
 
 console.log(yearsUntilRetirement(1950,'Jonas'));
+*/
