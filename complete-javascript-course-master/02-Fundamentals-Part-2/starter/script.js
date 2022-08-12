@@ -74,7 +74,7 @@ function fruitProcessor(apples, oranges){
   const applePieces = cutFruitPieces(apples);
   const orangePieces = cutFruitPieces(oranges);
 
-  
+
   const juice = `Juice with ${applePieces} apples and ${orangePieces} oranges.`;
   return juice;
 }
@@ -95,12 +95,12 @@ const yearsUntilRetirement = function(birthYear, firstname) {
   if (retirement > 0 ){
     return `${firstname} retires in ${retirement} years.`//return之後的程式碼都不會被執行
   } else{
-    console.log(`${firstname} already retired.`); 
+    console.log(`${firstname} already retired.`);
     return -1;
   }
 
   // return retirement;
-  
+
 }
 
 console.log(yearsUntilRetirement(1950,'Jonas'));
@@ -174,7 +174,7 @@ if (friends.includes('Peter')){
 let x = 10;
 console.log(x);
 
-x=20;
+x = 20;
 console.log(x);
 
 const y = 'Hello';
@@ -183,30 +183,30 @@ console.log(y);
 const z = '22';
 console.log(z);
 
-console.log(x+z);
-console.log(x+y+z);
+console.log(x + z);
+console.log(x + y + z);
 
-function print (x){
-  if (x>18){
+function print(x) {
+  if (x > 18) {
     console.log(x);
-  }else if (x === 18){
+  } else if (x === 18) {
     console.log('they are eqal');
-  }else{
+  } else {
     console.log('error');
   }
 }
 
 print(16);
 
-function newPrint(x){
-  switch (x){
+function newPrint(x) {
+  switch (x) {
     case '20':
-    console.log('>18');
-    break;
+      console.log('>18');
+      break;
 
     case '18':
       console.log('=18');
-    break;
+      break;
 
     case '16':
       console.log('=16');
@@ -218,12 +218,12 @@ newPrint('20');
 newPrint('18');
 newPrint('16');
 
-const calcNum = resault => resault -1000 ;
+const calcNum = resault => resault - 1000;
 
 const calcNum2 = calcNum(1001);
 console.log(calcNum2);
 
-const num = [100, 200 ,300];
+const num = [100, 200, 300];
 console.log(num[1]);
 num.push(400);
-console.log(num[num.length-1]);
+console.log(num[num.length - 1]);
