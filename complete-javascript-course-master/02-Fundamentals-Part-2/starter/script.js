@@ -169,7 +169,7 @@ console.log(friends.includes(23));//true
 
 if (friends.includes('Peter')){
   console.log('You have a friend called Peter!')
-}*/
+}
 
 let x = 10;
 console.log(x);
@@ -227,3 +227,73 @@ const num = [100, 200, 300];
 console.log(num[1]);
 num.push(400);
 console.log(num[num.length - 1]);
+
+
+//object 由property所組成，有key value pair，跟array不一樣不受到排列順序影響，可以用key去找到裡面的資料
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName:'Schmit',
+  birthYear:1991,
+  job:'teacher',
+  friends:['Michael','Peter','Steven'],
+  hasDriverLicense: false,
+
+  // calcAge: function(birthYear) {
+  //   return 2037 - birthYear;
+  // }
+  //在object裡面的function叫做method
+  //用this keyword用同個object裡面的資料
+  // calcAge: function() {
+  //   console.log(this.birthYear);
+  //   return 2037 - this.birthYear;
+  // }
+  calcAge: function() {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function(){
+    return`${this.firstName} is a ${this.calcAge()}-year old ${this.job}. And he ${this.hasDriverLicense ? "has" : "don't have" } driver's lisence.`},
+    //記得要先call功能以免age undefined
+};
+//call function in the object
+// console.log(jonas.calcAge(jonas.birthYear));
+// console.log(jonas['calcAge'](jonas.birthYear));
+
+console.log(jonas.calcAge());
+console.log(jonas.age);
+
+//challenge
+console.log(jonas.getSummary());
+
+console.log(jonas);
+//可以用.去找到裡面的內容
+console.log(jonas.lastName);
+//也可以用[]放expression去找裡面的內容
+console.log(jonas['lastName']);
+//在[]裡面可以放入variable和加號
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+//可以用對話框把使用者輸入的內容放進ket裡面去找到對應的項目
+// const interstingIn = prompt('What do you want to know about Jonas?');
+
+// if(jonas[interstingIn]) {
+//   console.log(jonas[interstingIn]);
+// }else{
+//   console.log("I don't know!");
+// }
+
+//可以用.或是[](operator)的方式加入更多key value pair
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmit';
+console.log(jonas);
+
+//challenge
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+//array是一種已經設定好互動方式的object
+
+*/
