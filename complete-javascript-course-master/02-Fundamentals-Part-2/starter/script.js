@@ -296,4 +296,79 @@ console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his bes
 
 //array是一種已經設定好互動方式的object
 
-*/
+
+
+//for loop 會在condition = true的情況下重複執行
+for (let rep = 1; rep <= 10; rep++){
+  console.log(`Lifting weught repetition ${rep}`);
+}
+
+const jonasArray = [
+  'Jonas',
+  'Schemit',
+  2037-1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven']
+];
+const types = [];
+//從0開始所以i要設定在總數-1
+for (let i = 0; i<jonasArray.length;i++){
+  //讀取array
+  console.log(jonasArray[i], typeof jonasArray[i]);
+  //用原有的array創造新的array
+  //types[i] = typeof jonasArray[i];
+  //另一種創造array的方式，比較乾淨
+  types.push(typeof jonasArray[i]); 
+}
+console.log(types);
+
+const years = [1991,2007,1969,2020];
+const ages = [];
+for (let i = 0; i<years.length; i++){
+  ages.push (2037-years[i]);
+}
+console.log(ages);
+
+//contunue and breaks
+for (let i = 0; i<jonasArray.length;i++){
+  if(typeof jonasArray[i] !== 'string') continue;
+  console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+for (let i = 0; i<jonasArray.length;i++){
+  if(typeof jonasArray[i] === 'number') break;
+  console.log(jonasArray[i], typeof jonasArray[i]);
+}
+//逆向的array
+const jonasArray = [
+  'Jonas',
+  'Schemit',
+  2037-1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven']
+];
+//loop裡面還有loop
+for (let i = jonasArray.length-1; i >= 0; i--){
+  console.log(i,jonasArray[i]);
+}
+
+for (let exercise = 1; exercise <4;exercise++){
+  console.log(`-------------Starting exercise ${exercise}`);
+  for (let rep = 1; rep <= 6; rep ++){
+    console.log(`Exercise ${exercise} Lifting weight repetition ${rep}`);
+  }
+}
+//while loop 不需要依賴counter的數字條件
+let rep = 1;
+while(rep<=10){
+  console.log(`Lifting weight repetition ${rep}`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6)+1;
+console.log(dice);
+while(dice !== 6){
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6)+1
+  if (dice === 6) console.log('Loop is about to end...');
+}*/
