@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 //strict mode幫助我們避免去做會導致JavaScript出錯的事情，會把出錯的部分顯示出來
 /*
 let hasDriverLicense = false;
@@ -371,4 +371,23 @@ while(dice !== 6){
   console.log(`You rolled a ${dice}`);
   dice = Math.trunc(Math.random() * 6)+1
   if (dice === 6) console.log('Loop is about to end...');
-}*/
+}
+let sum = 0;
+console.log("test");
+const array = [501, 201, 200, 100];
+//跑完i就不見了
+// for (let i = 0; i < array.length; i++) {
+//   if (array[i] % 2 === 1) {
+//     sum = sum + array[i];
+//   }
+// }
+
+//跑完i還會在
+let i = 0;
+while (i < array.length) {
+  sum = sum + array[i];
+  i++;
+}
+console.log(sum);
+console.log(i);
+*/

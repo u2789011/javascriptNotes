@@ -1,4 +1,3 @@
-
 /*let js = 'amazing';
 if (js === 'amazing') alert ('JavaScript is fun!');
       
@@ -286,4 +285,20 @@ age >= 18 ? console.log("I like to drink wine 🍷") : console.log("I like to dr
 const drink = age >= 18 ? 'wine🍷' : 'water🥛';
 console.log(drink);
 console.log(`I like to drink ${age >= 18 ? "wine 🍷" : "water 🥛"}`);
+
+
+// const calcAge3 = (birthYear) => 2037 - birthYear;
+// const age3 = calcAge3(1991);
+// console.log(age3);
+
+const x = (f) => f + 3;
+const y = (g) => g * 3;
+const newx = y(x(10));
+console.log(newx);
+
+function newTest(x) {
+  x = (x + 3) * 3;
+  console.log(x);
+}
+newTest(10);
 */
