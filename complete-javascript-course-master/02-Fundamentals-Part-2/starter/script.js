@@ -277,7 +277,7 @@ const nameKey = 'Name';
 console.log(jonas['first' + nameKey]);
 console.log(jonas['last' + nameKey]);
 
-//可以用對話框把使用者輸入的內容放進ket裡面去找到對應的項目
+//可以用對話框把使用者輸入的內容放進key裡面去找到對應的項目
 // const interstingIn = prompt('What do you want to know about Jonas?');
 
 // if(jonas[interstingIn]) {
