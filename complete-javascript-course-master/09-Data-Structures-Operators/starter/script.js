@@ -24,6 +24,13 @@ const restaurant = {
       `Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} on ${time} to ${address}`
     );
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here us your delicious pasta with ${ing1},${ing2},${ing3}.`);
+  },
+  orderPizza: function (mainIng, ...otherIng) {
+    console.log(mainIng);
+    console.log(otherIng);
+  },
   openingHours: {
     thu: {
       open: 12,
@@ -39,7 +46,7 @@ const restaurant = {
     },
   },
 };
-
+/*
 restaurant.orderDelivery({
   time: '22:30',
   address: 'Via del Sole ,21',
@@ -78,7 +85,59 @@ const {
 } = openingHours;
 console.log(o, c);
 
-/*
+//可以用來把array合併
+const arr = [3, 4, 5];
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+console.log(...newArr);
+// console.log(1, 2, 3, 4, 5);
+// 跟destructring很像，差異在於他是把全部的array項目都拿出來而且不會創造新的variable
+
+const newMenu = [...restaurant.mainMenu, 'Gnoocci'];
+console.log(newMenu);
+//the spread operator
+
+//usecase
+
+//create shallow copy
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//join two array
+const menuJoin = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menuJoin);
+
+//Iterables: array,strings.maps.sets. Not object
+const str = 'jonas';
+const letters = [...str, '', 's.'];
+console.log(letters);
+
+console.log(...str);
+// console.log(`${...str}`);//會壞掉
+//通常被逗號分開的多個值是用在function的arrgument或者是兩個都是新的array的狀況
+
+const orderPasta = function (ing1, ing2, ing3) {
+  console.log(`Here us your delicious pasta with ${ing1},${ing2},${ing3}.`);
+};
+
+// real world example
+const ingredients = [
+  prompt("Let's make pasta! Ingredient 1?"),
+  prompt("Let's make pasta! Ingredient 2?"),
+  prompt("Let's make pasta! Ingredient 3?"),
+];
+
+// console.log(orderPasta(...ingredients));
+
+//objects也可以用...
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristoeante Roma';
+console.log(restaurant.name);
+console.log(restaurantCopy.name);
+
+
 const arr = [2, 3, 4];
 const a = arr[0];
 const b = arr[1];
@@ -111,3 +170,48 @@ console.log(i, j, k);
 //Default values
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);*/
+
+//spread,because in the right side og =
+const arr = [1, 2, ...[3, 4]];
+console.log(arr); //[1,2,3,4]
+
+//rest,because on the left side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others); //1 2 [3,4,5]
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+]; //跳過中間把後面其他放到同個variable裡面
+
+console.log(pizza, risotto, otherFood);
+
+//object
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+console.log(sat);
+
+//function
+const add = function (...numbers) {
+  // console.log(numbers);
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
+};
+
+add(2, 3);
+add(5, 3, 7, 2);
+add(8, 2, 5, 3, 2, 1, 4);
+
+const x = [23, 5, 7];
+add(...x);
+
+// orderPizza: function (mainIng, ...otherIng) {
+//   console.log(mainIng);
+//   console.log(otherIng);
+// },
+
+//real life usecase
+restaurant.orderPizza('mushroom', 'onion', 'simon', 'olives');
+
+restaurant.orderPizza('mushroom');
