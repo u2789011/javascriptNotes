@@ -47,6 +47,74 @@ const restaurant = {
   },
 };
 /*
+const rest1 = {
+  name: 'Capri',
+  // numGuest: 20,
+  numGuest: 0,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+
+//Or assignment operator
+// rest1.numGuest = rest1.numGuest || 10;
+// rest2.numGuest = rest2.numGuest || 10;
+
+// rest1.numGuest ||= 10;
+// rest2.numGuest ||= 10;
+
+rest1.numGuest ??= 10;
+rest2.numGuest ??= 10;
+
+//true 就return、falsy就換下一個
+// rest1.owner = rest1.owner && '<anonymous>';
+// rest2.owner = rest2.owner && '<anonymous>';
+
+rest1.owner &&= '<anonymous>';
+rest2.owner &&= '<anonymous>';
+
+console.log(rest1, rest2);
+
+
+//use any data type, return any data type
+//short-circuiting 只要是true就return（後面的就不會被評估）如果全部都是fales就return最後一個
+console.log(3 || 'jonas');
+console.log('' || 'jonas');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+restaurant.numGuests = 23;
+
+const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guest1);
+
+//如果是0的話會return 10
+const guest2 = restaurant.numGuests || 10;
+console.log(guest2);
+
+//可以改用nullish coalescing operator
+//只有要null 或 undefined的時候才會跳下一個
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
+
+//如果遇到false就會直接return false的項目不會評估到後面的
+//如果全部都true就會return最後一個
+
+console.log(0 && 'jonas');
+console.log(7 && 'jonas');
+console.log('Hello' && 23 && null && 'jonas');
+
+//practice example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushroom', 'spanish');
+}
+restaurant.orderPizza && restaurant.orderPizza('mushroom', 'spanish');
+
+
 restaurant.orderDelivery({
   time: '22:30',
   address: 'Via del Sole ,21',
@@ -169,7 +237,7 @@ console.log(i, j, k);
 
 //Default values
 const [p = 1, q = 1, r = 1] = [8, 9];
-console.log(p, q, r);*/
+console.log(p, q, r);
 
 //spread,because in the right side og =
 const arr = [1, 2, ...[3, 4]];
@@ -214,4 +282,4 @@ add(...x);
 //real life usecase
 restaurant.orderPizza('mushroom', 'onion', 'simon', 'olives');
 
-restaurant.orderPizza('mushroom');
+restaurant.orderPizza('mushroom');*/
