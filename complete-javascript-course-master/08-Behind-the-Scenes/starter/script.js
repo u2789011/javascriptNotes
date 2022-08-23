@@ -26,5 +26,93 @@ function calcAge(birthYear) {
 
 const firstName = 'Jonas';
 calcAge(1991);
-*/
+
 console.log(this);
+
+function x() {
+  const xx = 22;
+  y();
+  // console.log(yy);
+}
+
+function y() {
+  const yy = 23;
+  console.log(z(yy));
+
+  function a() {
+    const aa = 100;
+    console.log(aa);
+  }
+  a();
+  // console.log(x());
+}
+const z = z => z + 3;
+// x();
+y();
+console.log(aa);
+
+
+const mark = {
+  email: 'markfu@mongodb.com',
+  mobile: '0972322805',
+  office: '0287291148',
+  // print: function () {
+  //   console.log(this.email);
+  //   console.log(this.mobile);
+  //   console.log(this.office);
+  // },
+};
+
+const kuan = {
+  email: 'kuan-chun-chang@mongodb.com',
+  mobile: '0958633205',
+  office: '0277430622#6222',
+};
+
+// console.log(mark.email);
+
+// function print(this) {
+//   console.log(this.email);
+//   console.log(this.mobile);
+//   console.log(this.office);
+// }
+// mark.print();
+
+const print = function () {
+  console.log(this.email);
+};
+print(mark);
+
+const jonas = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+jonas.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = jonas.calcAge;
+matilda.calcAge();
+
+const calcAgeArrow = birthYear => {
+  console.log(2037 - birthYear);
+  console.log(this); //window
+};
+calcAgeArrow(1980);
+
+const mark = {
+  email: 'markfu@mongodb.com',
+  mobile: '0972322805',
+  office: '0287291148',
+};
+
+const email = 'markfu@mongodb.com';
+
+console.log(mark.email);
+console.log(email);
+*/
