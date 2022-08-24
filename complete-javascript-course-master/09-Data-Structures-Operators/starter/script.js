@@ -282,4 +282,41 @@ add(...x);
 //real life usecase
 restaurant.orderPizza('mushroom', 'onion', 'simon', 'olives');
 
-restaurant.orderPizza('mushroom');*/
+restaurant.orderPizza('mushroom');
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}:${el}`);
+}
+
+console.log(...menu.entries());
+*/
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+//optional chaining
+// console.log(restaurant.openingHours.mon.open);
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.fri?.open);
+
+//example
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+// for (const day of days) {
+//   console.log(day);
+//   const open = restaurant.openingHours[day]?.open ?? 'Closed';
+//   console.log(`On ${day},we open at ${open}`);
+// }
+
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openstr = `We are open on ${properties.length} days`;
+
+for (const day of properties) {
+  openstr += `${day},`;
+}
+console.log(openstr);

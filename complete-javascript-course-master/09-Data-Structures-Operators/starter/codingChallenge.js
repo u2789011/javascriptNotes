@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -49,12 +49,19 @@ const allPlayer = [...player1, ...player2];
 const player1Final = [...player1, 'Thiago', 'Coutinho', 'Periscic'];
 
 const {
-  odd: { team1, x: draw, team2 },
+  odds: { team1, x: draw, team2 },
 } = game;
 console.log(team1, draw, team2);
 
-const printGoal = function () {
-  console.log();
+const printGoal = function (...players) {
+  console.log(`${players.length} goals were scored`);
+  console.log(`${players}`);
 };
 
-printGoal('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+// printGoal('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+printGoal(...game.scored);
+
+team1 < team2 && console.log('Team1 is more likely to win');
+
+team1 > team2 && console.log('Team2 is more likely to win');
+console.log(team1, team2);*/
