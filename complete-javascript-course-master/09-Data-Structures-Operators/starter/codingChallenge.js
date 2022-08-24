@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -40,7 +40,24 @@ const game = {
     team2: 6.5,
   },
 };
+const properties = Object.values(game.scored);
+for (const name of properties) {
+  console.log(name);
+}
 
+const oddAverge = Object.values(game.odds);
+// console.log(oddAverge);
+
+for (const odd of oddAverge) {
+  console.log(odd);
+  let sum = 0;
+  sum += odd;
+  console.log(sum);
+  let averge = sum / oddAverge.length;
+  console.log(averge);
+}
+
+/*
 // const player1 = game.players[0];
 // const player2 = game.players[1];
 const [player1, player2] = game.players;
