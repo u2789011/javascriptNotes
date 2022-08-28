@@ -96,3 +96,21 @@ team1 < team2 && console.log('Team1 is more likely to win');
 
 team1 > team2 && console.log('Team2 is more likely to win');
 console.log(team1, team2);*/
+document.body.append(document.createElement('textarea'));
+
+document.body.append(document.createElement('button'));
+const button = document.querySelector('button');
+console.log(button);
+
+button.addEventListener('click', function () {
+  const text = document.querySelector('textarea').value;
+  const splitText = text.split('\n');
+  for (const [i, s] of splitText.entries()) {
+    const [first, second] = s.toLowerCase().trim().split('_');
+    console.log(splitText, first, second);
+    const output = `${first}${second.replace(s[0], s[0].toUpperCase())}`;
+    console.log(`${output.padEnd(20)}${'👍'.repeat(i + 1)}`);
+  }
+  // const newText = [upper].join(' ') + '\n';
+  // console.log(newText);
+});
