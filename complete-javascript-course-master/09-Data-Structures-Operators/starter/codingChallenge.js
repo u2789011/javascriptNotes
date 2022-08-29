@@ -95,9 +95,9 @@ printGoal(...game.scored);
 team1 < team2 && console.log('Team1 is more likely to win');
 
 team1 > team2 && console.log('Team2 is more likely to win');
-console.log(team1, team2);*/
-document.body.append(document.createElement('textarea'));
+console.log(team1, team2);
 
+document.body.append(document.createElement('textarea'));
 document.body.append(document.createElement('button'));
 const button = document.querySelector('button');
 console.log(button);
@@ -108,9 +108,12 @@ button.addEventListener('click', function () {
   for (const [i, s] of splitText.entries()) {
     const [first, second] = s.toLowerCase().trim().split('_');
     console.log(splitText, first, second);
-    const output = `${first}${second.replace(s[0], s[0].toUpperCase())}`;
+    const output = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
     console.log(`${output.padEnd(20)}${'👍'.repeat(i + 1)}`);
   }
   // const newText = [upper].join(' ') + '\n';
   // console.log(newText);
-});
+});*/
