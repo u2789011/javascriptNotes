@@ -709,4 +709,71 @@ const planesInLine = function (n) {
 planesInLine(5);
 planesInLine(3);
 planesInLine(12);
-*/
+
+const str = 'Bevis Eric Ashley';
+const [w, u, v] = str.split(' ');
+w.toUpperCase(); //如果沒有存下來就會不見
+v.toLowerCase(); //如果沒有存下來就會不見
+console.log(w, v); //Bevis Ashley
+console.log(w.toUpperCase(), v.toLowerCase()); //BEVIS ashley
+console.log(str.slice(3, 14)); //is Eric Ash
+
+const x = '100 200 300';
+const [a, b, c] = x.split(' ');
+console.log(a, b, c);
+const y = parseInt(a, 10); //把字串變成數字
+const z = parseInt(c, 10); //把字串變成數字
+console.log(y + z); //400
+
+const k = y + z;
+console.log(k.toString()); //把數字變成字串
+const q = 'eric ho';
+
+console.log(q.replace('ho', 'huang')); //替換字
+
+const j = '100.jpg';
+console.log(j.replace('.jpg', '.json')); //可以用在替換檔名
+
+const p = 'a.jpg b.jpg c.jpg';
+const pp = p.split(' ');
+for (const d of pp) {
+  console.log(d);
+} //用for loop印出來
+
+const pSet = new Set(pp);
+console.log(pSet); //放進set裡面
+
+const rest = new Map();
+rest.set('a.jpg', 'a.json');
+rest.set('b.jpg', 'b.json');
+rest.set('c.jpg', 'c.json'); //放進set裡面
+console.log(rest);
+console.log(rest.get('a.jpg'));
+
+function add(d) {
+  rest.set(d + '.jpg', d + '.json');
+} //自動放進set
+
+add('i');
+add('u');
+add('y');
+console.log(rest);
+const t = {
+  str: 'eric',
+  add: function () {
+    rest.set(this.str + '.jpg', this.str + '.json');
+  }, //this.str = t.str
+};
+
+t.add();
+console.log(rest);
+
+const r = {
+  str: 'ashley',
+  add: function () {
+    rest.set(this.str + '.jpg', this.str + '.json');
+  }, //this.str = r.str
+};
+
+r.add();
+console.log(rest);*/
