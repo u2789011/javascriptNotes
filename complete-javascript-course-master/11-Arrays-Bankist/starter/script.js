@@ -174,3 +174,4 @@ const movementsDescriptions = movements.map(
     )}`
 );
 console.log(movementsDescriptions);
+const whitdraws = movements.filter(mov => mov < 0);
