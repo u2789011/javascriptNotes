@@ -303,3 +303,11 @@ Promise.any([
 ])
   .then(res => console.log(res))
   .catch(err => console.error(err));*/
+
+const lotteryPromise = new Promise(function (resolve, reject) {
+  if (Math.ramdom() >= 0.5) {
+    resolve('You WIN 💰');
+  } else {
+    reject(new Error('You lost your money 💩'));
+  }
+});

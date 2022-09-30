@@ -105,6 +105,7 @@ console.log(arr[arr.length - 1]);
 console.log(arr.slice(-1)[0]);
 
 console.log(arr.at(-1));*/
+/*
 // Looping Arrays: forEach
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
@@ -211,4 +212,33 @@ const max = movements.reduce((acc, mov) => {
   if (acc > mov) return acc;
   else return mov;
 }, movements[0]);
-console.log(max);
+console.log(max);*/
+
+console.log('test');
+
+const test = [100, -9, 8, -7, 6, -5, 4, -3, 2, -1];
+const test1 = test.map(i => i * 3);
+// console.log(test1);
+// test.forEach(function (t, i) {
+//   console.log(`${i}: ${t}`);
+// });
+const test2 = test
+  .filter(i => i > 0)
+  .map(i => i * 3)
+  .reduce((temp, cur) => {
+    if (temp > cur) {
+      return temp;
+    } else {
+      return cur;
+    }
+  }, 100);
+// .reduce((acc, cur) => acc + cur, 0);
+
+console.log(test2);
+const test3 = ['bevis', 'eric', 'ashley'];
+const test4 = test3
+  .map(a => a.toUpperCase())
+  .filter(a => a.includes('I'))
+  .map(a => a.replace('I', 'Z'))
+  .reduce((string, cur) => string + cur, '');
+console.log(test4);
